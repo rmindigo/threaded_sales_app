@@ -1,0 +1,14 @@
+
+
+<div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="..." alt="...">
+    </a>
+  </div>
+  <div class="media-body">
+    <%= post.content %></br>
+	<%= link_to time_ago_in_words(post.created_at), post_path(post) %> ago | <%= link_to "reply" %>
+  </div>
+</div>
+

@@ -1,0 +1,15 @@
+<p>
+	
+<%= form_for @post do |f| %>
+
+	<div class="form-group">    
+		<%= f.text_field :content, class: 'form-control', placeholder: "Share something here..." %> 
+	</div>
+	
+	<div class="post_button">
+		<%= f.submit "Post", class: "btn btn-primary" %>
+	</div>
+
+<% end %>
+	
+</p>
