@@ -1,6 +1,7 @@
 ThreadedSalesApp::Application.routes.draw do
 
-  resources :posts
+  resources :posts, only: [:index, :show, :create]
+  get '/posts/new/(:parent_id)', to: 'posts#new', as: :new_post
 
   root     'posts#index'
   # The priority is based upon order of creation: first created -> highest priority.

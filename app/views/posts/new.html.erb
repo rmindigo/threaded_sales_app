@@ -1,0 +1,7 @@
+<h1>Reply to this post!</h1>
+ 
+<% if @post.parent %>
+  <%= render 'post', post: @post.parent, from_reply_form: true %>
+<% end %>
+ 
+<%= render 'form' %>

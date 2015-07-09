@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
 	def index
 		@post = Post.new
-		@posts = Post.all.order("created_at DESC")
+		@posts = Post.hash_tree
 	end
 
 	def show
@@ -11,11 +11,17 @@ class PostsController < ApplicationController
 	end
 
 	def new
-		@post = Post.new
+		@post = Post.new(parent_id: params[:parent_id])
 	end
 
 	def create
-		@post = Post.new(post_params)
+		if params[:post][:parent_id].to_i > 0
+    		parent = Post.find_by_id(params[:post].delete(:parent_id))
+    		@post = parent.children.build(post_params)
+    	else
+    		@post = Post.new(post_params)
+    	end
+
 		if @post.save
 			flash[:success] = 'Your post was successfully added!'
 			redirect_to posts_path
