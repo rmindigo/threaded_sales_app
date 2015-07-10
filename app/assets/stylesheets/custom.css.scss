@@ -1,5 +1,35 @@
 @import "bootstrap";
 
+
+/* universal */
+
+body {
+  padding-top: 60px;
+}
+
+.navbar {
+	background-color: #00FF00;
+	border: none;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+     
+
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
 /* posts */
 
 .media {
@@ -18,4 +48,34 @@
 
 .replies {
 	margin-left: 50px;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #138A36;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#menu {
+	color: #2F2F2F;
+}
+
+#menu:hover {
+	color: #2BD9FE;
+}
+
+.account {
+  color: #FFF;
 }
