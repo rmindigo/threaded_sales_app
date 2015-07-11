@@ -11,7 +11,7 @@ class PostsController < ApplicationController
 	end
 
 	def new
-		@post = Post.new(parent_id: params[:parent_id])
+		@post = current_user.posts.build(parent_id: params[:parent_id])
 	end
 
 	def create
@@ -19,7 +19,7 @@ class PostsController < ApplicationController
     		parent = Post.find_by_id(params[:post].delete(:parent_id))
     		@post = parent.children.build(post_params)
     	else
-    		@post = Post.new(post_params)
+    		@post = current_user.posts.build(post_params)
     	end
 
 		if @post.save
