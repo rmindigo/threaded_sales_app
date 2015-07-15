@@ -3,12 +3,13 @@
 
 /* universal */
 
+
 body {
   padding-top: 60px;
 }
 
 .navbar {
-	background-color: #1EFFBC;
+	background-color: black;
 	border: none;
 }
 
@@ -28,6 +29,12 @@ textarea {
 
 .center h1 {
   margin-bottom: 10px;
+}
+
+/* home page logged out */
+
+.home {
+  background-image: image-url('bently.jpg'); // link to /assets/images/monte_carlo.jpg
 }
 
 
@@ -65,7 +72,7 @@ textarea {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #508991;
+  color: #FFF;
   text-transform: uppercase;
   padding-top: 9px;
   font-weight: bold;
@@ -77,22 +84,37 @@ textarea {
 }
 
 #menu {
-	color: #508991;
-  text-transform: uppercase;
-  font-weight: bold;
+	color: #FFF;
+   font-family: Lucida Sans Unicode;
 }
 
 #menu:hover {
 	color: #2BD9FE;
 }
 
+#drop {
+   font-family: Lucida Sans Unicode;
+}
+
 .account {
-  color: #508991;
-  text-transform: uppercase;
-  font-weight: bold;
+  color: #FFF;
+  
 
 }
 
 .caret {
-  color: #508991;
+  color: #FFF;
 }
+
+/* home page */
+
+.home-content {
+  text-align: center;
+  font-family: Lucida Sans Unicode;
+
+}
+
+.jumbotron {
+  margin-top: 80px;
+}
+

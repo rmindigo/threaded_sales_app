@@ -1,31 +1,33 @@
 
+<% if user_signed_in? %>
+
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "glenross", root_path, id: "logo" %>
+    <%= link_to "glengarry highlands", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         
-        <% if user_signed_in? %>
-          <li><%= link_to "home", root_path, id: "menu" %></li>
+       
+          <li><%= link_to "Home", root_path, id: "menu" %></li>
           <li><%= link_to "Members", users_path, id: "menu" %></li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
               <div class="account"><%=  %><%= current_user.name.capitalize %><b class="caret"></b></div>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "Profile",current_user, id: "menu" %></li>
-              <li><%= link_to "Settings", edit_user_registration_path, id: "menu" %></li>
+              <li><%= link_to "Profile",current_user, id: "drop" %></li>
+              <li><%= link_to "Settings", edit_user_registration_path, id: "drop" %></li>
               <li class="divider"></li>
               <li>
-                <%= link_to "Log out", destroy_user_session_path, method: "delete", id: "menu" %>
+                <%= link_to "Log out", destroy_user_session_path, method: "delete", id: "drop" %>
               </li>
             </ul>
           </li>
-        <% else %>
-          <li><%= link_to "About", "#", id: "menu" %></li>
-          <li><%= link_to "Log in", new_user_session_path, id: "menu" %></li>
-        <% end %>
       </ul>
     </nav>
   </div>
 </header>
+
+<% else %>
+         
+ <% end %>
