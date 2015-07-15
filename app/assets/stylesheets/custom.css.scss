@@ -8,7 +8,7 @@ body {
 }
 
 .navbar {
-	background-color: #00FF00;
+	background-color: #1EFFBC;
 	border: none;
 }
 
@@ -30,6 +30,7 @@ textarea {
   margin-bottom: 10px;
 }
 
+
 /* posts */
 
 .media {
@@ -50,13 +51,21 @@ textarea {
 	margin-left: 50px;
 }
 
+.media-body {
+  font-family: Verdana;
+}
+
+#time_ago {
+  color: #508991;
+}
+
 /* header */
 
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #138A36;
+  color: #508991;
   text-transform: uppercase;
   padding-top: 9px;
   font-weight: bold;
@@ -68,7 +77,9 @@ textarea {
 }
 
 #menu {
-	color: #2F2F2F;
+	color: #508991;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 #menu:hover {
@@ -76,5 +87,12 @@ textarea {
 }
 
 .account {
-  color: #FFF;
+  color: #508991;
+  text-transform: uppercase;
+  font-weight: bold;
+
+}
+
+.caret {
+  color: #508991;
 }

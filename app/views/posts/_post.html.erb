@@ -8,9 +8,9 @@
   </div>
   <div class="media-body">
     <%= post.content %></br>
-	<%= link_to time_ago_in_words(post.created_at), post_path(post) %> ago by <%= post.user.name %>| <% from_reply_form ||= nil %>
+	<%= link_to time_ago_in_words(post.created_at), post_path(post), id: "time_ago" %> ago | <% from_reply_form ||= nil %>
 <% unless from_reply_form %>
-  <%= link_to 'reply', new_post_path(post.id) %>
+  <%= link_to 'reply', new_post_path(post.id), id: "time_ago" %>
 <% end %>
   </div>
 </div>
