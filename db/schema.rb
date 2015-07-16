@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150712043326) do
+ActiveRecord::Schema.define(version: 20150716183418) do
 
   create_table "post_hierarchies", id: false, force: true do |t|
     t.integer "ancestor_id",   null: false
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 20150712043326) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "name"
+    t.string   "company"
+    t.string   "title"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

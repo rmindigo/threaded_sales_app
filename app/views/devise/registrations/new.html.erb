@@ -17,6 +17,16 @@
 
     <div class="field">
       
+      <%= f.text_field :company, autofocus: true, :placeholder => 'Company' %>
+    </div>
+
+    <div class="field">
+      
+      <%= f.text_field :title, autofocus: true, :placeholder => 'Title' %>
+    </div>
+
+    <div class="field">
+      
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
