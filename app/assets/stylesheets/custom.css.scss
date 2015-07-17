@@ -63,7 +63,15 @@ textarea {
 }
 
 #time_ago {
-  color: #508991;
+  color: #9DB4C0;
+}
+
+.details {
+  color: #9DB4C0;
+}
+
+.style_image {
+  border-radius: 50%;
 }
 
 /* header */
@@ -158,4 +166,27 @@ textarea {
     border-bottom: 1px solid $gray-lighter;
   }
 }
+
+/* user show page */
+
+.show_posts {
+  margin-top: 78px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

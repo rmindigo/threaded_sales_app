@@ -32,6 +32,11 @@ gem 'will_paginate', '~> 3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'closure_tree', '~> 5.2.0'
 gem 'devise', '~> 3.5.1'
+gem 'carrierwave', '~> 0.10.0'
+gem 'fog', '~> 1.32.0'
+gem 'mini_magick', '~> 4.2.7'
+gem 'nokogiri', '~> 1.6.6.2'
+gem 'rails_autolink', '~> 1.1.6'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

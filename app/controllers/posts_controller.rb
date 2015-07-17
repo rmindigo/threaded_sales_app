@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+	require 'rails_autolink'
 	before_action :authenticate_user!, except: [:index]
 
 	def index
@@ -18,6 +19,8 @@ class PostsController < ApplicationController
 		if params[:post][:parent_id].to_i > 0
     		parent = Post.find_by_id(params[:post].delete(:parent_id))
     		@post = parent.children.build(post_params)
+    		
+
     	else
     		@post = current_user.posts.build(post_params)
     	end
@@ -37,12 +40,15 @@ class PostsController < ApplicationController
 	end
 
 	def destroy
+		
 	end
 
 	private
 
+	
+
 	def post_params
-		params.require(:post).permit(:content)
+		params.require(:post).permit(:content).merge(user_id: current_user.id)
 	end
 
 end

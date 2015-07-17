@@ -1,17 +1,32 @@
 
 
 <div class="media">
-  <div class="media-left">
-    <a href="#">
-      <img class="media-object" src="http://placehold.it/50x50" alt="...">
-    </a>
-  </div>
+    <div class="media-left">
+        <div class="style_image">
+          <% if post.user.avatar.url.present? %>
+              <%= image_tag(post.user.avatar.url,:style => 'border-radius: 15%;') %>
+          <% else %>  
+          <a href="#">
+            <img class="media-object" src="http://placehold.it/50x50" alt="...">
+          </a>
+          <% end %>
+        </div>  
+    </div>
   <div class="media-body">
-    <%= post.content %></br>
-	<%= link_to time_ago_in_words(post.created_at), post_path(post), id: "time_ago" %> ago | <% from_reply_form ||= nil %>
-<% unless from_reply_form %>
-  <%= link_to 'reply', new_post_path(post.id), id: "time_ago" %>
-<% end %>
+
+        <%= auto_link(post.content) %></br>
+
+    <div class="details">
+
+      	<%= link_to time_ago_in_words(post.created_at), post_path(post), id: "time_ago" %> ago by <%=link_to post.user.name.capitalize, post.user %> | <% from_reply_form ||= nil %>
+
+        <% unless from_reply_form %>
+
+          <%= link_to 'reply', new_post_path(post.id), id: "time_ago" %> | <%= link_to "delete", '#', id: "time_ago" %>
+
+        <% end %>
+
+    </div>
   </div>
 </div>
 
