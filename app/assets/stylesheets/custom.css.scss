@@ -9,7 +9,7 @@ body {
 }
 
 .navbar {
-	background-color: black;
+	background-color: #EB4511;
 	border: none;
 }
 
@@ -60,7 +60,10 @@ textarea {
 
 .media-body {
   font-family: Verdana;
+
 }
+
+
 
 #time_ago {
   color: #9DB4C0;
@@ -80,7 +83,7 @@ textarea {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #FFF;
+  color: #FEFDFF;
   text-transform: uppercase;
   padding-top: 9px;
   font-weight: bold;
@@ -92,7 +95,7 @@ textarea {
 }
 
 #menu {
-	color: #FFF;
+	color: #FEFDFF;
    font-family: Lucida Sans Unicode;
 }
 
@@ -105,7 +108,7 @@ textarea {
 }
 
 .account {
-  color: #FFF;
+  color: #FEFDFF;
   
 
 }
@@ -173,6 +176,35 @@ textarea {
   margin-top: 78px;
 
 }
+
+/*flash*/
+.alert-error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-alert {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+
+.alert-notice {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
 
 
 
