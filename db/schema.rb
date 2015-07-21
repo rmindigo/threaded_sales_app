@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150717212829) do
+ActiveRecord::Schema.define(version: 20150720233856) do
 
   create_table "post_hierarchies", id: false, force: true do |t|
     t.integer "ancestor_id",   null: false
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20150717212829) do
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
+    t.string   "lastname"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true

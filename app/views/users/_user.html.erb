@@ -11,7 +11,7 @@
     <% end %>
   </div>
   <div class="media-body">
-    <h4 class="media-heading"><%= link_to user.name.capitalize, user %></h4>
+    <h4 class="media-heading"><%= link_to user.name.capitalize, user %> <%= user.lastname.capitalize %></h4>
     	<li> Joined <%= user.created_at.strftime("%m-%d-%y") %></li>
     	<li>Works for <%= user.company %> as <%= user.title %></li>
       <li><%= user.email %></li>

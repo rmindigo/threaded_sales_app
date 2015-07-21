@@ -18,7 +18,7 @@
 
     <div class="details">
 
-      	<%= link_to time_ago_in_words(post.created_at), post_path(post), id: "time_ago" %> ago by <%=link_to post.user.name.capitalize, post.user %> | <% from_reply_form ||= nil %>
+      	<%= link_to time_ago_in_words(post.created_at), post_path(post), id: "time_ago" %> ago by <%=link_to post.user.name.capitalize, post.user, id: "time_ago" %> | <% from_reply_form ||= nil %>
 
         <% unless from_reply_form %>
 

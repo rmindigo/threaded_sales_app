@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_devise_permitted_parameters
-    registration_params = [:email, :name, :company, :title, :password, :password_confirmation, :avatar, :avatar_cache]
+    registration_params = [:email, :name, :lastname, :company, :title, :password, :password_confirmation, :avatar, :avatar_cache]
 
     if params[:action] == 'update'
       devise_parameter_sanitizer.for(:account_update) { 
