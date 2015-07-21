@@ -1,0 +1,28 @@
+<div class="container job_list">
+
+<h1>New Sales Job Opportunities</h1></br>
+
+<%= link_to "Post a new oppty", new_job_path, class: "btn btn-info" %>
+
+<% @jobs.each do |job| %>
+
+<div class="panel panel-info">
+  <!-- Default panel contents -->
+  <div class="panel-heading">New Opportunity!</div>
+  
+
+  <!-- List group -->
+  <ul class="list-group">
+    <li class="list-group-item">Created: <%= time_ago_in_words(job.created_at) %> ago </li>
+    <li class="list-group-item">Posted by: <%= job.user.name.capitalize %> <%= job.user.lastname.capitalize %> </li>
+    <li class="list-group-item">Company: <%= job.company %>  </li>
+    <li class="list-group-item">Position: <%= job.position %>  </li>
+    <li class="list-group-item">City: <%= job.city %>  </li>
+    <li class="list-group-item">Contact for more info: <%= job.contact %> </li>
+  
+  </ul>
+</div>
+
+<% end %>
+
+</div>

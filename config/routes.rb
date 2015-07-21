@@ -4,6 +4,7 @@ ThreadedSalesApp::Application.routes.draw do
   
   resources :users, only: [:show, :index]
   resources :posts, only: [:index, :show, :create]
+  resources :jobs, only: [:index, :new, :create]
 
   get 'events'  => 'static_pages#events'
 

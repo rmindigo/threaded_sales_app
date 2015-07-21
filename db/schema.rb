@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150720233856) do
+ActiveRecord::Schema.define(version: 20150721195136) do
+
+  create_table "jobs", force: true do |t|
+    t.string   "company"
+    t.string   "position"
+    t.string   "city"
+    t.string   "contact"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
 
   create_table "post_hierarchies", id: false, force: true do |t|
     t.integer "ancestor_id",   null: false
