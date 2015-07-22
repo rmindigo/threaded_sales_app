@@ -4,8 +4,13 @@ class User < ActiveRecord::Base
  mount_uploader :avatar, AvatarUploader
 
  devise :database_authenticatable, :registerable,
- :recoverable, :rememberable, :trackable, :validatable, :confirmable
+ :recoverable, :rememberable, :trackable, :validatable
+
+ protected
+def confirmation_required?
+  false
+end
  
 end
 # Include default devise modules. Others available are:
-# :lockable, :timeoutable and :omniauthable
+# :lockable, :timeoutable and :omniauthable,  :confirmable
